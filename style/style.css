@@ -53,7 +53,7 @@ p {
 
 #animate {
     position: relative;
-    background-image: url("pictures/bird.png");
+    background-image: url("../pictures/bird.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 75px;
@@ -101,70 +101,70 @@ p {
 }
 
 #about {
-    background-image: url("pictures/portrait_BW.jpeg");
+    background-image: url("../pictures/portrait_BW.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #music {
-    background-image: url("pictures/music.png");
+    background-image: url("../pictures/music.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #art {
-    background-image: url("pictures/art.JPG");
+    background-image: url("../pictures/art.JPG");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #pic {
-    background-image: url("pictures/portrait_color.jpeg");
+    background-image: url("../pictures/portrait_color.jpeg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #blog {
-    background-image: url("pictures/bird.png");
+    background-image: url("../pictures/bird.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #class {
-    background-image: url("pictures/class.png");
+    background-image: url("../pictures/class.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #classimg {
-    background-image: url("pictures/art.JPG");
+    background-image: url("../pictures/art.JPG");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #bl {
-    background-image: url("pictures/becominglatino.jpg");
+    background-image: url("../pictures/becominglatino.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #emf {
-    background-image: url("pictures/P1.jpg");
+    background-image: url("../pictures/P1.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #qr {
-    background-image: url("pictures/researchstatement.png");
+    background-image: url("../pictures/researchstatement.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
