@@ -179,3 +179,10 @@ p {
 .sem {
     text-align: left;
 }
+
+.gallery-item {
+    height: 95%;
+    width: 95%;
+    margin: 4%;
+}
+
