@@ -1,0 +1,188 @@
+body {
+    overflow-x:hidden;
+    padding: 15px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+h2{
+    text-align: center;
+    font-size: 45px;
+}
+
+.sect {
+    text-align: center;
+    padding: 70px 0;
+    height: 450px;
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.hover p{
+    background-color: black;
+    color: white;
+}
+
+.hover {
+    text-align: center;
+    height: 300px;
+    visibility: hidden;
+    color: white;
+    background-color: black;
+}
+.sect:hover .hover {
+   visibility: visible;
+}
+
+.sect:hover {
+    opacity: 0.3;
+}
+
+.icon:hover {
+    opacity: 0.5;
+}
+
+#animate {
+    position: relative;
+    background-image: url("../pictures/bird.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75px;
+    -webkit-animation: mymove 10s infinite;
+    animation: mymove 10s infinite;
+}
+
+@-webkit-keyframes mymove {
+    from {left: -10px;}
+    to {left: 2000px;}
+}
+@keyframes mymove {
+    from {left: -10px;}
+    to {left: 2000px;}
+}
+
+
+.collapsible {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    border-width: 5px;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+  
+.active, .collapsible:hover {
+    background-color: #555;
+}
+  
+.content {
+    text-align: center;
+    padding: 0 18px;
+    width: 80%;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.dropdown {
+    margin-left: 10%;
+}
+
+#about {
+    background-image: url("../pictures/portrait_BW.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#music {
+    background-image: url("../pictures/music.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#art {
+    background-image: url("../pictures/art.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#pic {
+    background-image: url("../pictures/portrait_color.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#blog {
+    background-image: url("../pictures/bird.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#class {
+    background-image: url("../pictures/class.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#classimg {
+    background-image: url("../pictures/art.JPG");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#bl {
+    background-image: url("../pictures/becominglatino.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#emf {
+    background-image: url("../pictures/P1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#qr {
+    background-image: url("../pictures/researchstatement.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#poem {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.sem {
+    text-align: left;
+}
+
+.gallery-item {
+    height: 95%;
+    width: 95%;
+    margin: 4%;
+}
+

@@ -1,188 +1,66 @@
+/* Existing styles */
 body {
-    overflow-x:hidden;
-    padding: 15px;
-    font-family: "Courier New", Courier, monospace;
+    background-color: #121212; /* Very dark grey */
+    color: #f5f5f5; /* Very light grey */
+    font-family: "Courier New", Courier;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Aligns all text in body to center */
 }
 
-h1{
-    text-align: center;
-    font-size: 60px;
-    font-weight: bold;
-}
-
-h2{
-    text-align: center;
-    font-size: 45px;
-}
-
-.sect {
-    text-align: center;
-    padding: 70px 0;
-    height: 450px;
-    font-size: 50px;
+h1, h2, h3, h4, h5, h6 {
+    color: #8fe67a; /* Light green color*/
 }
 
 p {
-    text-align: center;
-    font-size: 20px;
+    line-height: 1.6; /* Optional: Improve readability with better line spacing */
 }
 
-.hover p{
-    background-color: black;
-    color: white;
+/* Scrolling Banner Styles */
+.banner-container {
+    width: 100%;
+    overflow: hidden; /* Hide the overflow to ensure smooth scrolling */
+    background-color: #121212; /* Dark background matching the body */
+    color: #8fe67a; /* Light green color*/
+    position: fixed; /* Keep the banner fixed at the top */
+    top: 0;
+    left: 0;
+    padding: 15px 0; /* Adjust padding as needed */
+    z-index: 9999; /* Ensure it's on top of other content */
+    height: 50px; /* Ensure enough height for the text */
+    line-height: 60px; /* Align text vertically */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center the banner content horizontally */
 }
 
-.hover {
-    text-align: center;
-    height: 300px;
-    visibility: hidden;
-    color: white;
-    background-color: black;
-}
-.sect:hover .hover {
-   visibility: visible;
+/* Style for the banner content */
+.banner-content {
+    white-space: nowrap; /* Prevent line breaks */
+    display: inline-block;
+    position: absolute; /* Position it absolutely within the container */
+    animation: scroll-left 8s linear infinite; /* Animation for scrolling effect */
+    /* Removing transform to keep the text in a single line and scroll properly */
 }
 
-.sect:hover {
-    opacity: 0.3;
+/* Keyframes for scrolling animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    to {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
 }
 
-.icon:hover {
-    opacity: 0.5;
+/* Add margin-top to main content to ensure it doesn't overlap with the banner */
+.container {
+    margin-top: 50px; /* Adjust this value based on the height of your banner */
 }
 
-#animate {
-    position: relative;
-    background-image: url("../pictures/bird.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 75px;
-    -webkit-animation: mymove 10s infinite;
-    animation: mymove 10s infinite;
+/* New class for smaller text */
+.small-text {
+    font-size: 0.8rem; /* Adjust this value as needed for the smaller text size */
+    line-height: 1.4; /* Optional: Adjust line height for better readability */
+    color: #fa6243; /* redish color*/
 }
-
-@-webkit-keyframes mymove {
-    from {left: -10px;}
-    to {left: 2000px;}
-}
-@keyframes mymove {
-    from {left: -10px;}
-    to {left: 2000px;}
-}
-
-
-.collapsible {
-    background-color: red;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 80%;
-    border-width: 5px;
-    text-align: center;
-    outline: none;
-    font-size: 15px;
-}
-  
-.active, .collapsible:hover {
-    background-color: #555;
-}
-  
-.content {
-    text-align: center;
-    padding: 0 18px;
-    width: 80%;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-}
-
-.dropdown {
-    margin-left: 10%;
-}
-
-#about {
-    background-image: url("../pictures/portrait_BW.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#music {
-    background-image: url("../pictures/music.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#art {
-    background-image: url("../pictures/art.JPG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#pic {
-    background-image: url("../pictures/portrait_color.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#blog {
-    background-image: url("../pictures/bird.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#class {
-    background-image: url("../pictures/class.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#classimg {
-    background-image: url("../pictures/art.JPG");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#bl {
-    background-image: url("../pictures/becominglatino.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#emf {
-    background-image: url("../pictures/P1.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#qr {
-    background-image: url("../pictures/researchstatement.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-#poem {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.sem {
-    text-align: left;
-}
-
-.gallery-item {
-    height: 95%;
-    width: 95%;
-    margin: 4%;
-}
-
