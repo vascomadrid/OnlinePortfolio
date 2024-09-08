@@ -1,7 +1,11 @@
 /* Existing styles */
 body {
-    background-color: #121212; /* Very dark grey */
-    color: #f5f5f5; /* Very light grey */
+    /*background-color: #121212; /* Very dark grey */
+    background-image: url('../pictures/bkg_grey2.png');
+    background-repeat: repeat; /* Repeat both horizontally and vertically */
+    background-size: auto; /* Original size of the image */
+    background-position: top left; /* Align to top-left corner */
+    color: #dedede; /* Very light grey */
     font-family: "Courier New", Courier;
     margin: 0;
     padding: 0;
@@ -14,16 +18,17 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     line-height: 1.6; /* Optional: Improve readability with better line spacing */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Scrolling Banner Styles */
 .banner-container {
     width: 100%;
     overflow: hidden; /* Hide the overflow to ensure smooth scrolling */
-    background-color: #121212; /* Dark background matching the body */
+    background-color: rgba(18, 18, 18, 0.1); /* Dark background matching the body */
     color: #8fe67a; /* Light green color*/
     position: fixed; /* Keep the banner fixed at the top */
-    top: 0;
     left: 0;
     padding: 15px 0; /* Adjust padding as needed */
     z-index: 9999; /* Ensure it's on top of other content */
@@ -32,6 +37,16 @@ p {
     display: flex; /* Align items horizontally */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center the banner content horizontally */
+}
+
+/* Banner at the top */
+.banner-container.top {
+    top: 0; /* Position at the top */
+}
+
+/* Banner at the bottom */
+.banner-container.bottom {
+    bottom: 0; /* Position at the bottom */
 }
 
 /* Style for the banner content */
@@ -58,12 +73,48 @@ p {
     margin-top: 50px; /* Adjust this value based on the height of your banner */
 }
 
+/* Responsive text class */
+.responsive-text {
+    font-size: clamp(1rem, 2vw + 1rem, 3rem); /* Responsive font size */
+}
+
+/* upside-down text class*/
+.upside-down-text {
+    display: inline-block; /* Ensures the text behaves like a block for transformation */
+    transform: rotate(180deg); /* Rotates the text 180 degrees */
+    /* Optional: Adjust text alignment and other properties */
+    text-align: center; /* Centers text horizontally */
+}
+
+
 /* New class for smaller text */
 .small-text {
     font-size: 0.8rem; /* Adjust this value as needed for the smaller text size */
     line-height: 1.4; /* Optional: Adjust line height for better readability */
-    color: #fa6243; /* redish color*/
+    color: #f05454; /* reddish color */
 }
+
+/* New class for emoticon text */
+.emoticon-text {
+    /*color: #f054a0; /* pink color*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: colorChange 5s linear infinite;
+}
+
+/* Keyframes for color changing animation */
+@keyframes colorChange {
+    0% {
+        color: #f05454; /* Red */
+    }
+    50% {
+        color: #8fe67a; /* Green */
+    }
+    100% {
+        color: #7c9ce6; /* Blue */
+    }
+}
+
 /* Center images */
 .image-container {
     display: flex;
