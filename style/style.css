@@ -64,3 +64,16 @@ p {
     line-height: 1.4; /* Optional: Adjust line height for better readability */
     color: #fa6243; /* redish color*/
 }
+/* Center images */
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically (if container has a defined height) */
+    height: auto;           /* Example height, adjust as needed */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
