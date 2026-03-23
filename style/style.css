@@ -1,11 +1,12 @@
 /* Existing styles */
 body {
-    /*background-color: #121212; /* Very dark grey */
-    background-image: url('../pictures/bkg_grey2.png');
-    background-repeat: repeat; /* Repeat both horizontally and vertically */
-    background-size: auto; /* Original size of the image */
-    background-position: top left; /* Align to top-left corner */
+    background-color: #310206; /* Deep red */
+    /*background-image: url('../pictures/bkg_grey2.png');*/
+    /*background-repeat: repeat; /* Repeat both horizontally and vertically */
+    /*background-size: auto; /* Original size of the image */
+    /*background-position: top left; /* Align to top-left corner */
     color: #dedede; /* Very light grey */
+
     font-family: "Courier New", Courier;
     margin: 0;
     padding: 0;
@@ -20,6 +21,7 @@ p {
     line-height: 1.6; /* Optional: Improve readability with better line spacing */
     margin-top: 0;
     margin-bottom: 0;
+    /*color: #8fe67a;*/
 }
 
 /* Scrolling Banner Styles */
@@ -102,6 +104,62 @@ p {
     animation: colorChange 5s linear infinite;
 }
 
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;   /* center content horizontally */
+}
+
+.navbar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar-menu li a {
+    color: #ffffff;           /* white text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;       /* needed for pseudo-element */
+    transition: color 0.3s;
+}
+
+/* Hover & active underline effect */
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;           /* distance below text */
+    width: 0%;
+    height: 2px;
+    background-color: #8fe67a;  /* green underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover::after,
+.navbar-menu li a.active::after {
+    width: 100%;             /* underline expands fully */
+}
+
+.navbar-menu li a:hover {
+    color: #8fe67a;          /* text also changes to green on hover */
+}
+
+/* Mobile / small screen adjustment */
+@media (max-width: 600px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* Keyframes for color changing animation */
 @keyframes colorChange {
     0% {
@@ -127,4 +185,98 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* ===== HERO SECTION STYLING (safe additions) ===== */
+
+.hero-section{
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-title{
+    font-size: clamp(2.2rem, 3vw + 1rem, 3.5rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle{
+    font-size: 1.3rem;
+    color: #ffc905; /* yellow color */
+    margin-top: 10px;
+}
+
+.style-highlight{
+    color: #8fe67a;
+    font-weight: bold;
+}
+
+.availability{
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color: #dedede;
+}
+
+
+.availability span{
+    font-weight: bold;
+    color: #f05454;
+    text-decoration: underline;
+}
+
+.hero-image{
+    width:100%;
+    height:auto;       /* Let height adjust naturally */
+    display:block;     /* Remove inline gaps */
+}
+
+
+
+.intro-text p,
+.projects-section ul li {
+    margin-bottom: 12px;   /* slightly tighter spacing for readability */
+    font-size: 1.05rem;
+}
+
+.projects-section .section-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffc905; /* yellow color */
+}
+
+.row.my-3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.full-width-image {
+    width: 100%;       /* stretch across entire screen */
+    height: auto;      /* maintain aspect ratio, no cropping */
+    display: block;    /* remove inline spacing */
+    margin: 0;         /* optional: remove extra spacing */
+}
+
+.image-center{
+    display: flex;
+    justify-content: center; /* horizontal center */
+}
+
+.image-center img{
+    max-width: 100%; /* prevents overflow but keeps natural size */
+    height: auto;
+}
+
+.image-container.my-3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px; /* bigger on large screens */
+    margin: 0 auto;
+    padding: 0 20px; /* add some horizontal padding for small screens */
+}
+.container p{
+    margin-bottom: 10px;
 }
