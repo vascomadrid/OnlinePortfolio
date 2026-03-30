@@ -10,12 +10,11 @@ body {
     font-family: "Courier New", Courier;
     margin: 0;
     padding: 0;
-    text-align: Left; /* Aligns all text in body to center */
+    text-align: Center; /* Aligns all text in body to center */
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #8fe67a; /* Light green color*/
-    text-align: Center;
 }
 
 p {
@@ -25,6 +24,15 @@ p {
     /*color: #8fe67a;*/
 }
 
+
+li {
+  text-align: Left;
+}
+
+.subtitle{
+    color: #f05454; /* red color */
+    margin-bottom: 10px;
+}
 
 /* New class for smaller text */
 .small-text {

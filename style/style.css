@@ -220,7 +220,7 @@ img {
 
 .availability span{
     font-weight: bold;
-    color: #f05454;
+    color: #f05454; /* red text */
     text-decoration: underline;
 }
 
