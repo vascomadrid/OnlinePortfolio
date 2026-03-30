@@ -1,0 +1,64 @@
+/* Existing styles */
+body {
+    background-color: #310206; /* Deep red */
+    /*background-image: url('../pictures/bkg_grey2.png');*/
+    /*background-repeat: repeat; /* Repeat both horizontally and vertically */
+    /*background-size: auto; /* Original size of the image */
+    /*background-position: top left; /* Align to top-left corner */
+    color: #dedede; /* Very light grey */
+
+    font-family: "Courier New", Courier;
+    margin: 0;
+    padding: 0;
+    text-align: Left; /* Aligns all text in body to center */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #8fe67a; /* Light green color*/
+    text-align: Center;
+}
+
+p {
+    line-height: 1.6; /* Optional: Improve readability with better line spacing */
+    margin-top: 0;
+    margin-bottom: 0;
+    /*color: #8fe67a;*/
+}
+
+
+/* New class for smaller text */
+.small-text {
+    font-size: 0.8rem; /* Adjust this value as needed for the smaller text size */
+    line-height: 1.4; /* Optional: Adjust line height for better readability */
+    color: #f05454; /* reddish color */
+}
+
+/* New class for emoticon text */
+.emoticon-text {
+    /*color: #f054a0; /* pink color*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: colorChange 5s linear infinite;
+}
+
+
+/* Mobile / small screen adjustment */
+@media (max-width: 600px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Keyframes for color changing animation */
+@keyframes colorChange {
+    0% {
+        color: #f05454; /* Red */
+    }
+    50% {
+        color: #8fe67a; /* Green */
+    }
+    100% {
+        color: #7c9ce6; /* Blue */
+    }
+}
