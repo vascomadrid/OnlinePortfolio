@@ -1,12 +1,28 @@
 /* Existing styles */
-body {
-    background-color: #310206; /* Deep red */
-    /*background-image: url('../pictures/bkg_grey2.png');*/
-    /*background-repeat: repeat; /* Repeat both horizontally and vertically */
-    /*background-size: auto; /* Original size of the image */
-    /*background-position: top left; /* Align to top-left corner */
-    color: #dedede; /* Very light grey */
+html {
+    box-sizing: border-box; /* Common global variable to contain padding and border within the total size*/
+}
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* define colors */
+:root {
+    --bg: #310206; /* Deep red */
+    --text: #dedede; /* Very light grey */
+    --green: #8fe67a; /* Light green color*/
+    --yellow: #ffc905;
+    --red: #f05454; /* Bright red */
+    --blue: #7c9ce6;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
     font-family: "Courier New", Courier;
     margin: 0;
     padding: 0;
@@ -14,7 +30,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #8fe67a; /* Light green color*/
+    color: var(--green);
 }
 
 p {
@@ -24,21 +40,28 @@ p {
     /*color: #8fe67a;*/
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* ===== SCROLLING BANNER STYLING ===== */
+
 /* Scrolling Banner Styles */
 .banner-container {
     width: 100%;
     overflow: hidden; /* Hide the overflow to ensure smooth scrolling */
-    background-color: rgba(18, 18, 18, 0.1); /* Dark background matching the body */
-    color: #8fe67a; /* Light green color*/
+    color: var(--green);
     position: fixed; /* Keep the banner fixed at the top */
     left: 0;
-    padding: 15px 0; /* Adjust padding as needed */
+    padding: 0; /* Adjust padding as needed */
     z-index: 9999; /* Ensure it's on top of other content */
-    height: 50px; /* Ensure enough height for the text */
+    height: 60px; /* Ensure enough height for the text */
     line-height: 60px; /* Align text vertically */
     display: flex; /* Align items horizontally */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center the banner content horizontally */
+    pointer-events: none; /* Users can click underneath the banner */
 }
 
 /* Banner at the top */
@@ -54,10 +77,10 @@ p {
 /* Style for the banner content */
 .banner-content {
     white-space: nowrap; /* Prevent line breaks */
-    display: inline-block;
-    position: absolute; /* Position it absolutely within the container */
-    animation: scroll-left 8s linear infinite; /* Animation for scrolling effect */
-    /* Removing transform to keep the text in a single line and scroll properly */
+    display: inline-block; /* Allows text to be transformed without glitching*/
+    /*position: absolute; /* Position it absolutely within the container */
+    animation: scroll-left 10s linear infinite; /* Animation for scrolling effect */
+    will-change: transform; /* Let browser know that this is an animation */
 }
 
 /* Keyframes for scrolling animation */
@@ -68,11 +91,6 @@ p {
     to {
         transform: translateX(-100%); /* End off-screen to the left */
     }
-}
-
-/* Add margin-top to main content to ensure it doesn't overlap with the banner */
-.container {
-    margin-top: 50px; /* Adjust this value based on the height of your banner */
 }
 
 /* Responsive text class */
@@ -88,12 +106,13 @@ p {
     text-align: center; /* Centers text horizontally */
 }
 
+/* ===== TEXT FORMATTING ======= */
 
-/* New class for smaller text */
+/* New class for smaller text old site link currently deactivated */
 .small-text {
     font-size: 0.8rem; /* Adjust this value as needed for the smaller text size */
     line-height: 1.4; /* Optional: Adjust line height for better readability */
-    color: #f05454; /* reddish color */
+    color: var(--red); /* reddish color */
 }
 
 /* New class for emoticon text */
@@ -104,6 +123,7 @@ p {
     animation: colorChange 5s linear infinite;
 }
 
+/* Navigation Bar */
 .navbar {
     width: 100%;
     background-color: transparent;
@@ -123,7 +143,7 @@ p {
 }
 
 .navbar-menu li a {
-    color: #ffffff;           /* white text */
+    color: var(--white);           /* white text */
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
@@ -139,7 +159,7 @@ p {
     bottom: -3px;           /* distance below text */
     width: 0%;
     height: 2px;
-    background-color: #8fe67a;  /* green underline */
+    background-color: var(--green);  /* green underline */
     transition: width 0.3s ease;
 }
 
@@ -149,7 +169,7 @@ p {
 }
 
 .navbar-menu li a:hover {
-    color: #8fe67a;          /* text also changes to green on hover */
+    color: var(--green);          /* text also changes to green on hover */
 }
 
 /* Mobile / small screen adjustment */
@@ -163,13 +183,13 @@ p {
 /* Keyframes for color changing animation */
 @keyframes colorChange {
     0% {
-        color: #f05454; /* Red */
+        color: var(--red); /* Red */
     }
     50% {
-        color: #8fe67a; /* Green */
+        color: var(--green); /* Green */
     }
     100% {
-        color: #7c9ce6; /* Blue */
+        color: var(--blue); /* Blue */
     }
 }
 
@@ -179,12 +199,6 @@ p {
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically (if container has a defined height) */
     height: auto;           /* Example height, adjust as needed */
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* ===== HERO SECTION STYLING (safe additions) ===== */
@@ -202,25 +216,25 @@ img {
 
 .hero-subtitle{
     font-size: 1.3rem;
-    color: #ffc905; /* yellow color */
+    color: var(--yellow);
     margin-top: 10px;
 }
 
 .style-highlight{
-    color: #8fe67a;
+    color: var(--green);
     font-weight: bold;
 }
 
 .availability{
     margin-top: 12px;
     font-size: 1.2rem;
-    color: #dedede;
+    color: var(--text);
 }
 
 
 .availability span{
     font-weight: bold;
-    color: #f05454; /* red text */
+    color: var(--red);
     text-decoration: underline;
 }
 
@@ -242,7 +256,7 @@ img {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 8px;
-    color: #ffc905; /* yellow color */
+    color: var(--yellow);
 }
 
 .row.my-3 {
@@ -257,14 +271,6 @@ img {
     margin: 0;         /* optional: remove extra spacing */
 }
 
-.small-image {
-    width: 33%;
-    max-width: 120px;
-    min-width: 70px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 .image-center{
     display: flex;
@@ -289,6 +295,24 @@ img {
     width: auto;
     height: auto;
     max-width: 100%;
+}
+
+.socials-box {
+    height: 120px;              /* controls visual consistency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.socials-box img {
+    max-height: 65px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+.socials-box:hover img{
+    opacity: 0.5;
 }
 
 .image-container.my-3 {
